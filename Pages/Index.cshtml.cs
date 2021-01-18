@@ -41,7 +41,7 @@ namespace MyTestProgram.Pages
 
             WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(respone);
 
-            testWeather = $"Погода в {weatherResponse.Name} состовляет {weatherResponse.Main.Temp} гдадусов цельсия";
+            testWeather = $"Погода в {weatherResponse.Name} состовляет {weatherResponse.Main.Temp} градусов цельсия";
 
 
         }
