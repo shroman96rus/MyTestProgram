@@ -1,0 +1,69 @@
+﻿@page
+@model MyTestProgram.Pages.Translations.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/TransactionsIndex.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<h1 id="operationTitle">Операции</h1>
+
+<p>
+    <a asp-page="Create">Создать новыую запись</a>
+</p>
+<table class="table">
+    <thead>
+        <tr id="title">
+            <th>
+                @Html.DisplayNameFor(model => model.Transaction[0].operationСomment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transaction[0].summaOperation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transaction[0].dateOperation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Transaction) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.operationСomment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summaOperation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateOperation)
+            </td>
+            <td>
+                <span  class="buttons">
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
+                </span>
+                <span class="buttons">
+                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a>
+                </span>
+                <span class="buttons">
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </span>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    <p>Сумма заработанная за текущий период @Model.Sum</p>
+</div>
+
+
+
+

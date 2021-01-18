@@ -1,0 +1,32 @@
+﻿
+
+table{
+    border: 2px solid #000000;
+    margin-bottom: 14px;
+    box-shadow: 5px 5px 7px #808080;
+}
+
+#title{
+    color:crimson;
+}
+
+.buttons {
+    /*background-color: #b6ff00;*/
+    color: white;
+    border-radius: 10px;
+    margin: 5px 5px 5px 5px;
+    font-family: 'Pacifico', cursive;
+    
+}
+
+#operationTitle {
+    background: #6278de;
+    color: white;
+    /*margin: 5px 700px 50px 5px;*/
+    font-family: 'Pacifico', cursive;
+    width: 200px;
+    padding: 10px 10px 12px 10px;
+    border-radius: 12px;
+    
+}
+

@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+
+
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome to my programm</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+
+    <div>
+        <p>
+            Погода <a href="https://yandex.ru/pogoda/yekaterinburg?via=hl"> Яндекс погода</a>
+        </p>
+        <p>Данные о погоде: @Model.testWeather</p>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
